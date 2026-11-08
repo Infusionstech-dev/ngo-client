@@ -9,6 +9,7 @@ import type {
   ValueCard,
 } from "@/types/home";
 import { IMAGES } from "./images";
+import { buildGalleryPhotos } from "./gallery";
 
 /* ---------- Hero ---------- */
 
@@ -143,20 +144,7 @@ export const GALLERY_HEADING: SectionHeading = {
   highlight: "Moments",
 };
 
-// Layout mirrors the design: one large photo, two stacked beside it, then a wide bottom row
-const GALLERY_GRID_LAYOUT = [
-  "md:col-span-2 md:row-span-2",
-  "",
-  "",
-  "",
-  "md:col-span-2",
-];
-
-export const GALLERY_PHOTOS: GalleryPhoto[] = IMAGES.GALLERY.map((src, index) => ({
-  src,
-  alt: `Event photo ${index + 1}`,
-  gridClassName: GALLERY_GRID_LAYOUT[index],
-}));
+export const GALLERY_PHOTOS: GalleryPhoto[] = buildGalleryPhotos(IMAGES.GALLERY);
 
 export const GALLERY_BUTTON_LABEL = "View more";
 
