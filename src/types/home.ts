@@ -10,6 +10,12 @@ export type ImageAsset = {
   alt: string;
 };
 
+/** A piece of a heading; highlighted pieces are shown in the brand colour */
+export type TextSegment = {
+  text: string;
+  isHighlighted: boolean;
+};
+
 export type SectionHeading = {
   badge: string;
   title: string;
@@ -27,6 +33,10 @@ export type ValueCard = {
   title: string;
   description: string;
   isHighlighted: boolean;
+};
+
+export type PillarCard = FeatureCard & {
+  activities: string[];
 };
 
 export type GalleryPhoto = ImageAsset & {

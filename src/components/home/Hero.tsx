@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { HERO_CONTENT, HERO_IMAGE, HERO_TAGS } from "@/constants/home";
+import { IMAGE_SIZES } from "@/constants/images";
 import { ROUTES } from "@/constants/routes";
 
 export function Hero() {
@@ -14,7 +15,7 @@ export function Hero() {
           alt={HERO_IMAGE.alt}
           fill
           priority
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes={IMAGE_SIZES.HALF_WIDTH}
           className="object-cover"
         />
       </div>

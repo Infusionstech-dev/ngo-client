@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { MAIN_NAV } from "@/constants/navigation";
-import { HEADER_CTA_LABEL } from "@/constants/home";
+import { HEADER_CONTENT } from "@/constants/layout";
 import { ROUTES } from "@/constants/routes";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "./Logo";
@@ -39,9 +39,9 @@ export function Header() {
           ))}
         </nav>
         <Button href={ROUTES.MEMBERSHIP} className="hidden md:inline-flex">
-          {HEADER_CTA_LABEL}
+          {HEADER_CONTENT.ctaLabel}
         </Button>
-        <button onClick={toggleMenu} className="md:hidden" aria-label="Toggle menu">
+        <button onClick={toggleMenu} className="md:hidden" aria-label={HEADER_CONTENT.menuToggleAriaLabel}>
           <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2}>
             <path d={isMenuOpen ? MENU_CLOSE_ICON : MENU_OPEN_ICON} />
           </svg>
@@ -54,7 +54,7 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <Button href={ROUTES.MEMBERSHIP}>{HEADER_CTA_LABEL}</Button>
+          <Button href={ROUTES.MEMBERSHIP}>{HEADER_CONTENT.ctaLabel}</Button>
         </nav>
       )}
     </header>
