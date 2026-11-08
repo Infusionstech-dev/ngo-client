@@ -85,6 +85,24 @@ export type ContactFormField = {
   type: "text" | "email" | "tel" | "textarea";
 };
 
+export type MembershipTextField = {
+  name: "fullName" | "dateOfBirth" | "mobile" | "email" | "nationalId" | "address" | "occupation" | "organization";
+  label: string;
+  type: "text" | "date" | "tel" | "email" | "textarea";
+  isRequired: boolean;
+  /** Field takes the whole row instead of half */
+  isFullWidth: boolean;
+};
+
+export type SelectableOption = {
+  value: string;
+  label: string;
+};
+
+export type MembershipCategory = SelectableOption & {
+  description: string;
+};
+
 export type MembershipFee = {
   label: string;
   amount: string;
