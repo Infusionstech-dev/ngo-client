@@ -55,6 +55,23 @@ export type Publication = {
   publishedOn: string;
 };
 
+export type EventHighlight = {
+  label: string;
+  value: string;
+};
+
+export type PublicationEvent = {
+  id: number;
+  image: ImageAsset;
+  tag: string;
+  date: string;
+  location: string;
+  title: string;
+  summary: string;
+  photoCredit: string;
+  highlights: EventHighlight[];
+};
+
 export type MembershipFee = {
   label: string;
   amount: string;
