@@ -72,6 +72,19 @@ export type PublicationEvent = {
   highlights: EventHighlight[];
 };
 
+export type ContactMethod = {
+  icon: IconName;
+  label: string;
+  lines: string[];
+};
+
+export type ContactFormField = {
+  name: "fullName" | "email" | "phone" | "message";
+  label: string;
+  placeholder: string;
+  type: "text" | "email" | "tel" | "textarea";
+};
+
 export type MembershipFee = {
   label: string;
   amount: string;
