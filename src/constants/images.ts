@@ -16,6 +16,7 @@ export const IMAGE_SIZES = {
   HALF_WIDTH: "(min-width: 768px) 50vw, 100vw",
   GALLERY: "(min-width: 768px) 66vw, 100vw",
   PUBLICATION_THUMBNAIL: "200px",
+  CAROUSEL_CARD: "(min-width: 1024px) 36vw, (min-width: 640px) 50vw, 85vw",
 };
 
 export const IMAGES = {
