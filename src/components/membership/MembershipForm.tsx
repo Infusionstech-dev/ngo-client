@@ -66,11 +66,11 @@ export function MembershipForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
-      <FormSection stepNumber={1} title={MEMBERSHIP_SECTION_TITLES.personal}>
+      <FormSection title={MEMBERSHIP_SECTION_TITLES.personal}>
         <TextFieldGrid fields={PERSONAL_FIELDS} values={textValues} onChange={handleTextChange} />
       </FormSection>
 
-      <FormSection stepNumber={2} title={MEMBERSHIP_SECTION_TITLES.professional}>
+      <FormSection title={MEMBERSHIP_SECTION_TITLES.professional}>
         <TextFieldGrid fields={PROFESSIONAL_FIELDS} values={textValues} onChange={handleTextChange} />
         <p className={cn(FIELD_LABEL_CLASS_NAME, "mt-5 mb-2")}>{EXPERTISE_LABEL}</p>
         <ChipGroup
@@ -80,7 +80,7 @@ export function MembershipForm() {
         />
       </FormSection>
 
-      <FormSection stepNumber={3} title={MEMBERSHIP_SECTION_TITLES.category}>
+      <FormSection title={MEMBERSHIP_SECTION_TITLES.category}>
         <div className="grid gap-4 md:grid-cols-3">
           {MEMBERSHIP_CATEGORIES.map((category) => (
             <label
@@ -105,7 +105,7 @@ export function MembershipForm() {
         </div>
       </FormSection>
 
-      <FormSection stepNumber={4} title={MEMBERSHIP_SECTION_TITLES.payment}>
+      <FormSection title={MEMBERSHIP_SECTION_TITLES.payment}>
         <dl>
           {PAYABLE_FEES.map((fee) => (
             <div key={fee.label} className="flex items-center justify-between border-b border-ink/10 py-3">
@@ -119,7 +119,7 @@ export function MembershipForm() {
         </dl>
 
         <label className="mt-5 block">
-          <span className="text-sm font-semibold text-brand">{DONATION_FIELD.label}</span>
+          <span className="font-display text-base font-semibold text-brand">{DONATION_FIELD.label}</span>
           <input
             type="number"
             name="donation"
@@ -131,7 +131,7 @@ export function MembershipForm() {
           />
         </label>
 
-        <p className="mt-5 text-sm font-semibold text-brand">{PAYMENT_METHOD_LABEL}</p>
+        <p className="mt-5 font-display text-base font-semibold text-brand">{PAYMENT_METHOD_LABEL}</p>
         <div className="mt-2 flex flex-wrap gap-5">
           {PAYMENT_METHODS.map((method) => (
             <label key={method.value} className="flex cursor-pointer items-center gap-2 text-sm">
@@ -149,7 +149,7 @@ export function MembershipForm() {
         </div>
       </FormSection>
 
-      <FormSection stepNumber={5} title={MEMBERSHIP_SECTION_TITLES.interests}>
+      <FormSection title={MEMBERSHIP_SECTION_TITLES.interests}>
         <ChipGroup
           options={INTEREST_OPTIONS}
           selectedValues={selectedInterests}
@@ -157,7 +157,7 @@ export function MembershipForm() {
         />
       </FormSection>
 
-      <FormSection stepNumber={6} title={MEMBERSHIP_SECTION_TITLES.declaration}>
+      <FormSection title={MEMBERSHIP_SECTION_TITLES.declaration}>
         <label className="flex cursor-pointer items-start gap-3 text-sm text-ink/80">
           <input
             type="checkbox"

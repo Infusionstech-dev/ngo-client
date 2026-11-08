@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
 export default function PublicLayout({ children }: LayoutProps<"/">) {
   return (
@@ -7,6 +8,7 @@ export default function PublicLayout({ children }: LayoutProps<"/">) {
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
+      <ScrollReveal />
     </>
   );
 }
