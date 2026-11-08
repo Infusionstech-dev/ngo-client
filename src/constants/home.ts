@@ -5,6 +5,7 @@ import type {
   MembershipFee,
   Publication,
   SectionHeading,
+  TextSegment,
   ValueCard,
 } from "@/types/home";
 import { IMAGES } from "./images";
@@ -73,6 +74,18 @@ export const PURPOSE_BUTTON_LABEL = "View more details";
 
 export const WHY_NOW_CONTENT = {
   badge: "Why now",
+  titleLines: [
+    [
+      { text: "The ", isHighlighted: false },
+      { text: "opportunity", isHighlighted: true },
+      { text: " is here today.", isHighlighted: false },
+    ],
+    [
+      { text: "Lose", isHighlighted: true },
+      { text: " it and it will ", isHighlighted: false },
+      { text: "not return.", isHighlighted: true },
+    ],
+  ] satisfies TextSegment[][],
   description:
     "History has taught us again and again: a nation that fails to build thoughtful leadership in time falls behind. The opportunity before Bangladesh today, a young population, a growing educated class, and a public appetite for change, is not one to be squandered.",
 };
@@ -188,7 +201,3 @@ export const MEMBERSHIP_FEES: MembershipFee[] = [
   { label: "Annual membership fee", amount: "৳2,000", period: " / year" },
   { label: "Extra donation (optional)", amount: "As you wish" },
 ];
-
-/* ---------- Header ---------- */
-
-export const HEADER_CTA_LABEL = "Become a member";

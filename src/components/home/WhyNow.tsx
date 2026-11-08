@@ -1,4 +1,5 @@
 import { Icon } from "@/components/ui/Icon";
+import { HighlightedText } from "@/components/ui/HighlightedText";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { WHY_NOW_CHALLENGES, WHY_NOW_CONTENT } from "@/constants/home";
 
@@ -7,12 +8,12 @@ export function WhyNow() {
     <section className="bg-cream py-16">
       <div className="mx-auto max-w-6xl px-4 text-center">
         <SectionBadge>{WHY_NOW_CONTENT.badge}</SectionBadge>
-        {/* Heading keeps its inline markup because several separate words are highlighted */}
         <h2 className="mt-4 text-3xl font-semibold leading-snug">
-          The <span className="text-brand">opportunity</span> is here today.
-          <br />
-          <span className="text-brand">Lose</span> it and it will{" "}
-          <span className="text-brand">not return.</span>
+          {WHY_NOW_CONTENT.titleLines.map((line, index) => (
+            <span key={index} className="block">
+              <HighlightedText segments={line} />
+            </span>
+          ))}
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-ink/70">
           {WHY_NOW_CONTENT.description}

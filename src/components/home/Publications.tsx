@@ -7,6 +7,7 @@ import {
   PUBLICATIONS_HEADING,
   SAMPLE_PUBLICATIONS,
 } from "@/constants/home";
+import { IMAGE_SIZES } from "@/constants/images";
 import { ROUTES, publicationDetailRoute } from "@/constants/routes";
 
 export function Publications() {
@@ -25,7 +26,7 @@ export function Publications() {
                 src={publication.image.src}
                 alt={publication.image.alt}
                 fill
-                sizes="200px"
+                sizes={IMAGE_SIZES.PUBLICATION_THUMBNAIL}
                 className="object-cover"
               />
             </div>

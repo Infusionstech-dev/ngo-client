@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { GALLERY_BUTTON_LABEL, GALLERY_HEADING, GALLERY_PHOTOS } from "@/constants/home";
+import { IMAGE_SIZES } from "@/constants/images";
 import { ROUTES } from "@/constants/routes";
 
 export function Gallery() {
@@ -16,7 +17,7 @@ export function Gallery() {
                 src={photo.src}
                 alt={photo.alt}
                 fill
-                sizes="(min-width: 768px) 66vw, 100vw"
+                sizes={IMAGE_SIZES.GALLERY}
                 className="object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>

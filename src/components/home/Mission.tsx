@@ -7,6 +7,7 @@ import {
   MISSION_IMAGE,
   MISSION_PILLARS,
 } from "@/constants/home";
+import { IMAGE_SIZES } from "@/constants/images";
 import { ROUTES } from "@/constants/routes";
 
 export function Mission() {
@@ -31,7 +32,7 @@ export function Mission() {
           src={MISSION_IMAGE.src}
           alt={MISSION_IMAGE.alt}
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes={IMAGE_SIZES.HALF_WIDTH}
           className="object-cover"
         />
       </div>
