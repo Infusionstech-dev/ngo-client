@@ -39,7 +39,7 @@ export const PREVIOUS_NEWS_HEADING: SectionHeading = {
   highlight: "Moments & Publications",
 };
 
-const PREVIOUS_NEWS_COUNT = 6;
+const PREVIOUS_NEWS_COUNT = 4;
 
 // Sample data until the publications API is connected
 export const PREVIOUS_NEWS: PublicationEvent[] = Array.from(
@@ -54,9 +54,32 @@ export const PREVIOUS_NEWS: PublicationEvent[] = Array.from(
   }),
 );
 
+/* ---------- Publication detail page ---------- */
+
+/** Every publication that has a detail page, looked up by the id in the URL */
+export const ALL_PUBLICATIONS: PublicationEvent[] = [FEATURED_PUBLICATION, ...PREVIOUS_NEWS];
+
+export const findPublicationById = (id: number) =>
+  ALL_PUBLICATIONS.find((publication) => publication.id === id);
+
+export const publicationPageTitle = (publicationTitle: string) =>
+  `${publicationTitle} | ${siteConfig.name}`;
+
+// Sample article text shared by all demo publications until real content is available
+export const SAMPLE_ARTICLE_PARAGRAPHS = [
+  "The forum opened with a keynote on empirical governance, setting out how transparent data and independent audits can strengthen public trust in state institutions. Speakers stressed that accountability must be built into systems, not added after problems appear.",
+  "In the working sessions, delegates were divided into three groups covering fiscal oversight, judicial integrity and digital public services. Each group reviewed recent case studies from Bangladesh and the region, and listed practical reforms that could be adopted within the next policy cycle.",
+  "Student representatives and young professionals played an active role, presenting survey findings on how citizens experience public services. Their input shaped several of the final recommendations, especially on open data and citizen feedback channels.",
+  "The session closed with the ratification of the final draft of White Paper No. 04, which will be shared with policymakers, academic institutions and the media in the coming weeks.",
+];
+
+export const PUBLICATION_DETAIL_LABELS = {
+  backToPublications: "Back to publications",
+  highlightsHeading: "Event highlights",
+  relatedHeading: "More publications",
+  relatedCount: 3,
+};
+
 export const PUBLICATION_LABELS = {
   viewDetails: "View details",
-  highlightsAriaLabel: "Event highlights",
-  carouselAriaLabel: "Previous news",
-  goToSlideAriaLabel: "Go to news item",
-};
+  highlightsAriaLabel: "Event highlights",};

@@ -8,7 +8,7 @@ import { PublicationImage } from "./PublicationImage";
 
 export function PublicationCard({ publication }: { publication: PublicationEvent }) {
   return (
-    <article className="flex h-full flex-col rounded-xl bg-white p-4 shadow-sm">
+    <article className="flex h-full flex-col rounded-xl bg-white p-4 shadow-sm card-hover">
       <PublicationImage
         image={publication.image}
         tag={publication.tag}

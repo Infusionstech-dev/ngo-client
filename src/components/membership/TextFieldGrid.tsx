@@ -8,7 +8,7 @@ type TextFieldGridProps = {
   onChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 };
 
-export const FIELD_LABEL_CLASS_NAME = "text-sm font-medium text-navy";
+export const FIELD_LABEL_CLASS_NAME = "font-display text-base font-medium text-navy";
 
 const INPUT_CLASS_NAME =
   "mt-2 w-full rounded-lg border border-ink/20 bg-white px-3 py-2.5 outline-none focus:border-brand";

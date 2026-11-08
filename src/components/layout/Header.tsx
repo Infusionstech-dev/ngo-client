@@ -20,7 +20,7 @@ export function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/5 bg-paper/95 backdrop-blur">
+    <header className="animate-slide-down sticky top-0 z-50 border-b border-ink/5 bg-paper/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Logo />
         <nav className="hidden items-center gap-10 md:flex">

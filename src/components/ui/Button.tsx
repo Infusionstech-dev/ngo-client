@@ -19,7 +19,7 @@ export function Button({ href, children, variant = "primary", className }: Butto
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center justify-center rounded px-5 py-2.5 text-xs font-semibold uppercase tracking-wide transition-colors",
+        "inline-flex items-center justify-center rounded px-5 py-2.5 text-xs font-semibold uppercase tracking-wide transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 motion-reduce:transform-none",
         variants[variant],
         className,
       )}

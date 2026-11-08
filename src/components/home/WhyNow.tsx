@@ -20,7 +20,7 @@ export function WhyNow() {
         </p>
         <div className="mt-10 grid gap-4 text-left md:grid-cols-2">
           {WHY_NOW_CHALLENGES.map((challenge) => (
-            <div key={challenge.title} className="rounded-lg bg-white p-6 shadow-sm">
+            <div key={challenge.title} className="rounded-lg bg-white p-6 shadow-sm card-hover">
               <Icon name={challenge.icon} className="h-8 w-8 text-brand" />
               <h3 className="mt-4 text-xs font-bold uppercase tracking-wide">{challenge.title}</h3>
               <p className="mt-1 text-xs text-ink/60">{challenge.description}</p>
